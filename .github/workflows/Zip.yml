@@ -1,0 +1,4 @@
+      - name: Extract source zip
+        run: |
+          ZIP=$(find . -name 'LocalAI-source.zip' -not -path './.git/*' | head -1)
+          if [ -n "$ZIP" ]; then unzip -o -q "$ZIP" -d .; fi
